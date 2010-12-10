@@ -1,0 +1,5 @@
+module Weefire
+  CAMPFIRE_API_TOKEN = 'example0d1516be62be7a5a5b350e6631656fda0'
+  CAMPFIRE_SUBDOMAIN = 'yoursubdomain' # from yoursubdomain.campfirenow.com
+  CAMPFIRE_ROOM      = 'RoomName'
+end
