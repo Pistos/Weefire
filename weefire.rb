@@ -1,8 +1,12 @@
 require 'open-uri'
 require 'json'
+require 'cgi'
 
 # callback for data received in input
 def buffer_input_cb( data, buffer, input_data )
+  s = input_data.to_s
+  open "http://localhost:7001/say/#{ CGI.escape(s) }"
+  bputs s
   Weechat::WEECHAT_RC_OK
 end
 

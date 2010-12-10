@@ -37,6 +37,10 @@ module Weefire
     def recent
       @room.transcript Date.today
     end
+
+    def say( message )
+      @room.speak message
+    end
   end
 end
 
@@ -54,6 +58,10 @@ class MainController < Ramaze::Controller
 
   def recent
     $weefire_daemon.recent
+  end
+
+  def say( message )
+    $weefire_daemon.say message
   end
 end
 
